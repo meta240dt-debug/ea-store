@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EA Trading Store</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: #0b1020;
+      color: #f5f7fb;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; }
+    .container { width: min(1120px, 92%); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(11, 16, 32, 0.85);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 0;
+    }
+    .logo { font-size: 20px; font-weight: 800; letter-spacing: 0.5px; color: #fff; }
+    .nav-links { display: flex; gap: 18px; align-items: center; }
+    .nav-links a { color: #dbe4ff; font-size: 14px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 12px 18px; border-radius: 14px; font-weight: 700;
+      border: none; cursor: pointer;
+    }
+    .btn-primary { background: #4f7cff; color: white; }
+    .btn-secondary { background: rgba(255,255,255,0.08); color: white; }
+    .hero {
+      padding: 72px 0 40px;
+      background: radial-gradient(circle at top right, rgba(79,124,255,0.35), transparent 30%),
+                  radial-gradient(circle at left center, rgba(0,214,201,0.18), transparent 30%);
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 28px; align-items: center;
+    }
+    .badge {
+      display: inline-block; padding: 8px 12px; border-radius: 999px;
+      background: rgba(79,124,255,0.15); color: #9ec0ff; font-size: 13px; font-weight: 700;
+      margin-bottom: 18px;
+      border: 1px solid rgba(79,124,255,0.3);
+    }
+    h1 { font-size: clamp(34px, 5vw, 58px); line-height: 1.08; margin: 0 0 16px; }
+    .hero p { color: #c7d0ea; font-size: 18px; margin: 0 0 24px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px; padding: 24px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+    }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 24px; }
+    .stat { padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.05); }
+    .stat strong { display: block; font-size: 22px; }
+    section { padding: 34px 0; }
+    .section-title { font-size: 30px; margin: 0 0 10px; }
+    .section-sub { color: #b8c1db; margin: 0 0 22px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .feature h3, .plan h3, .review h3 { margin-top: 0; }
+    .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .price { font-size: 34px; font-weight: 800; margin: 12px 0; }
+    ul { padding-left: 18px; color: #d7def3; }
+    .highlight { border: 1px solid rgba(79,124,255,0.45); background: rgba(79,124,255,0.10); }
+    .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .cta {
+      text-align: center; padding: 48px 24px;
+      background: linear-gradient(135deg, rgba(79,124,255,0.22), rgba(0,214,201,0.10));
+      border-radius: 24px; border: 1px solid rgba(255,255,255,0.08);
+    }
+    .contact-box { margin-top: 16px; color: #cfd8f3; }
+    footer {
+      padding: 24px 0 48px; color: #98a3c6; font-size: 14px;
+    }
+    .small { font-size: 13px; color: #9aa7ca; }
+    @media (max-width: 900px) {
+      .hero-grid, .grid-3, .plans, .reviews { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">EA STORE</a>
+        <div class="nav-links">
+          <a href="#features">Tính năng</a>
+          <a href="#pricing">Bảng giá</a>
+          <a href="#reviews">Đánh giá</a>
+          <a href="#contact" class="btn btn-primary">Mua ngay</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">Website bán EA / Robot Trading</div>
+        <h1>Bán EA chuyên nghiệp bằng 1 landing page gọn, rõ, dễ chốt đơn</h1>
+        <p>Trang web này phù hợp để giới thiệu EA, công bố hiệu suất, bảng giá, chính sách hỗ trợ và nhận khách qua Telegram, Zalo hoặc email.</p>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn btn-primary">Xem gói EA</a>
+          <a href="#contact" class="btn btn-secondary">Liên hệ tư vấn</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>24/7</strong><span class="small">Hỗ trợ khách hàng</span></div>
+          <div class="stat"><strong>MT4/MT5</strong><span class="small">Tương thích nền tảng</span></div>
+          <div class="stat"><strong>Auto Trade</strong><span class="small">Kích hoạt nhanh</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">EA nổi bật</h3>
+        <p><strong>EA Gold Scalper X</strong></p>
+        <p>Lọc xu hướng, quản trị vốn, tối ưu cho XAUUSD và các cặp chính.</p>
+        <hr style="border-color: rgba(255,255,255,0.08)">
+        <p><strong>Kết quả minh họa</strong></p>
+        <p class="small">Lợi nhuận, drawdown, winrate, tài khoản test/live — thay bằng số liệu thật của bạn.</p>
+        <a href="#contact" class="btn btn-primary" style="width:100%; margin-top:10px">Nhận demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <h2 class="section-title">Website này có gì</h2>
+      <p class="section-sub">Tối ưu cho người bán EA cá nhân hoặc team nhỏ, không cần backend phức tạp.</p>
+      <div class="grid-3">
+        <div class="card feature">
+          <h3>Giới thiệu EA rõ ràng</h3>
+          <p>Mô tả chiến lược, thị trường phù hợp, timeframe, điều kiện chạy và cảnh báo rủi ro.</p>
+        </div>
+        <div class="card feature">
+          <h3>Bảng giá dễ chốt</h3>
+          <p>Hiển thị giá theo tháng, trọn đời, hoặc bản VIP kèm setup từ xa.</p>
+        </div>
+        <div class="card feature">
+          <h3>Nhận khách nhanh</h3>
+          <p>Gắn nút Telegram, Zalo, WhatsApp, email, form nhận demo hoặc link thanh toán.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="container">
+      <h2 class="section-title">Bảng giá mẫu</h2>
+      <p class="section-sub">Thay bằng gói thật của bạn.</p>
+      <div class="plans">
+        <div class="card plan">
+          <h3>Basic</h3>
+          <div class="price">$99</div>
+          <ul>
+            <li>1 license</li>
+            <li>Setup cơ bản</li>
+            <li>Hỗ trợ 7 ngày</li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary" style="width:100%">Chọn gói</a>
+        </div>
+        <div class="card plan highlight">
+          <h3>Pro</h3>
+          <div class="price">$249</div>
+          <ul>
+            <li>3 licenses</li>
+            <li>Preset tối ưu</li>
+            <li>Hỗ trợ 30 ngày</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary" style="width:100%">Mua nhiều nhất</a>
+        </div>
+        <div class="card plan">
+          <h3>Lifetime</h3>
+          <div class="price">$499</div>
+          <ul>
+            <li>Không giới hạn thời gian</li>
+            <li>Update version</li>
+            <li>Ưu tiên hỗ trợ</li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary" style="width:100%">Chọn gói</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <h2 class="section-title">Feedback mẫu</h2>
+      <p class="section-sub">Nên thay bằng ảnh chụp kết quả thật, tài khoản thật, hoặc Myfxbook/FXBlue nếu có.</p>
+      <div class="reviews">
+        <div class="card review">
+          <h3>Khách hàng A</h3>
+          <p>Setup nhanh, bot chạy ổn định, support tốt.</p>
+        </div>
+        <div class="card review">
+          <h3>Khách hàng B</h3>
+          <p>Giao diện dễ hiểu, có team hỗ trợ khi gặp lỗi VPS.</p>
+        </div>
+        <div class="card review">
+          <h3>Khách hàng C</h3>
+          <p>Được hướng dẫn cài đặt từ đầu tới lúc chạy live.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="cta">
+        <h2 class="section-title" style="margin-top:0">Sẵn sàng bán EA online</h2>
+        <p class="section-sub">Đổi các thông tin bên dưới thành kênh liên hệ thật của bạn.</p>
+        <div class="contact-box">
+          Telegram: @yourtelegram<br>
+          Zalo: 09xx xxx xxx<br>
+          Email: yourmail@example.com
+        </div>
+        <div style="margin-top:18px">
+          <a href="mailto:yourmail@example.com" class="btn btn-primary">Liên hệ mua EA</a>
+        </div>
+        <p class="small" style="margin-top:16px">Lưu ý: cần bổ sung điều khoản miễn trừ rủi ro và chính sách hoàn tiền nếu bạn bán sản phẩm tài chính.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © 2026 EA Store. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
+
